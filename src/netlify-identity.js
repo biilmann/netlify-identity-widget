@@ -34,6 +34,9 @@ const netlifyIdentity = {
 	close: () => {
 		store.closeModal();
 	},
+  logout: () => {
+    store.logout();
+  },
 	currentUser: () => {
 		if (!store.gotrue) { store.openModal('login'); }
 		return store.gotrue && store.gotrue.currentUser();
